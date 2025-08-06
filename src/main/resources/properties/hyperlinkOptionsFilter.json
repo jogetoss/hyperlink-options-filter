@@ -1,0 +1,60 @@
+[{
+    title : '@@HyperlinkOptionsFilter.config@@',
+    properties : [{
+        name:'defaultValue',
+        label:'@@HyperlinkOptionsFilter.defaultValue@@',
+        type:'textfield'
+    },
+    {
+        name : 'showLabel',
+        label : '@@HyperlinkOptionsFilter.showLabel@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'displayFull',
+        label : '@@HyperlinkOptionsFilter.displayFull@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'showCount',
+        label : '@@HyperlinkOptionsFilter.showCount@@',
+        type : 'checkbox',
+        value : '',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'options',
+        label : '@@HyperlinkOptionsFilter.options@@',
+        type : 'grid',
+        columns : [{
+            key : 'value',
+            label : '@@HyperlinkOptionsFilter.value@@'
+        },
+        {
+            key : 'label',
+            label : '@@HyperlinkOptionsFilter.label@@'
+        }]
+    }]
+},
+{
+    title : '@@HyperlinkOptionsFilter.chooseOptionsBinder@@',
+    properties : [{
+        name : 'optionsBinder',
+        label : '@@HyperlinkOptionsFilter.optionsBinder@@',
+        type : 'elementselect',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormLoadOptionsBinder',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+    }]
+}]
